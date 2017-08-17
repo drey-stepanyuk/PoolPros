@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Pool Pros</title>
+
+    <!-- styles -->
+    <link rel="stylesheet" href="styles/pool-pros-style.css">
+
+  </head>
+  <body>
+
+  <header>
+      <div id="strip">
+      </div>
+
+      <div id="flex-nav">
+        <div id="header-logo">
+        </div>
+
+          <button id="find-pro-button" type="button"></button>
+
+        <div id="m-menu-icon">
+        </div>
+
+        <div id="m-dropdown-menu">
+          <div id="m-dropdown-header">
+            <div id="m-menu-p">
+              <p>MENU</p>
+            </div>
+            <div id="m-exit">
+              <div id="line1"></div>
+              <div id="line2"></div>
+            </div>
+          </div>
+          <ul class="navbar-ul">
+            <li class="bottom-white" id="pool-menu-li">Pools &amp; Spas <img class="menu-arrow pools-spas" src="images/next-arrow.png" alt="&#9660;"></li>
+            <div class="m-menu-nested pools-spas" id="pool-menu">
+              <ul>
+                <li><a href="#">All Products</a></li>
+                <li><a href="#">Indoor Pools</a></li>
+                <li><a href="#">Outdoor Pools</a></li>
+                <li><a href="#">Concrete Pools</a></li>
+                <li><a href="#">Fiberglass Pools</a></li>
+                <li><a href="#">Spas</a></li>
+                <li><a href="#">Lighting</a></li>
+                <li><a href="#">Water Features</a></li>
+                <li><a href="#">Custom Features</a></li>
+                <li><a href="#">Tile &amp; Mosaic</a></li>
+              </ul>
+            </div>
+            <li class="bottom-white" id="supplies-menu-li">Supplies <img class="menu-arrow supplies" src="images/next-arrow.png" alt="&#9660;"></li>
+            <div class="supplies m-menu-nested" id="supplies-menu">
+              <ul>
+                <li><a href="#">Filters</a></li>
+                <li><a href="#">Automatic Cleaners</a></li>
+                <li><a href="#">PH Balance Kits</a></li>
+                <li><a href="#">Heaters</a></li>
+              </ul>
+            </div>
+            <li class="bottom-white" id="resources-menu-li">Resources <img class="menu-arrow resources" src="images/next-arrow.png" alt="&#9660;"></li>
+            <div class="m-menu-nested resources" id="resources-menu">
+              <ul>
+                <li><a href="#">Salt vs. Chlorine</a></li>
+                <li><a href="#">Investment Information</a></li>
+                <li><a href="#">Design Gallery</a></li>
+                <li><a href="#">Financing</a></li>
+                <li><a href="#">Warranties</a></li>
+                <li><a href="#">FAQ</a></li>
+              </ul>
+            </div>
+            <li id="services-menu-li">Services <img class="menu-arrow services" src="images/next-arrow.png" alt="&#9660;"></li>
+            <div class="m-menu-nested services" id="services-menu">
+              <ul>
+                <li><a href="#">Pool Service</a></li>
+                <li><a href="#">Spa Service</a></li>
+                <li><a href="#">Pool Installation</a></li>
+                <li><a href="#">Spa Installation</a></li>
+              </ul>
+            </div>
+          </ul>
+        </div>
+
+      </div>
+
+      <div id="banner">
+        <p id="banner-text-large"></p>
+        <p id="banner-text-aqua">A POOL PRO IS READY TO HELP!</p>
+        <hr>
+        <p id="banner-text-lower"></p>
+      </div>
+  </header>
+
+  <div id="main">
+
+    <div id="sub-header">
+
+      <div id="options-steps">
+
+        <div class="pro-options bottom-line">
+          <img src="images/1-circle.png">
+          <div class="pro-steps-content">
+            <h3>CHOOSE A PRO</h3>
+            <p>Make sure your ZIP code is correct, then choose a pro
+              from the list below.</p>
+          </div>
+        </div>
+
+        <div class="pro-options bottom-line">
+          <img src="images/2-circle.png">
+          <div class="pro-steps-content">
+            <h3>CONTACT A PRO</h3>
+            <p>Email a pro to make an appointment for pool &amp; spa
+              services or installation.</p>
+            </div>
+        </div>
+
+        <div class="pro-options">
+          <img src="images/3-circle.png">
+          <div class="pro-steps-content">
+            <h3>A PRO VISITS</h3>
+            <p>A pro will visit your home and assess your pool &amp; spa needs. </p>
+          </div>
+        </div>
+
+      </div>
+
+      <div id="water-banner">
+      </div>
+    </div>
+
+    <div id="dynamic-content">
+
+      <div id="dealer-inner">
+
+        <div id="dealer-filter">
+
+          <h3><span class="light-blue">7 Dealers</span></h3>
+          <label for='down-arrow-btn' class="dropdown-button" id="filter-results-btn">Filter Results</label>
+          <button class="dropdown-button" id="down-arrow-btn">&#9660;</button>
+
+        </div>
+
+        <div id="dealer-dropdown">
+          <div class="filter-option">
+            <div class="checkbox-option">
+              <input type="checkbox" name="dealer-option" id="service-option" value="1"/>
+            <label for="service-option"></label>
+            </div>
+              <h3>Service</h3>
+          </div>
+          <div class="filter-option">
+            <div class="checkbox-option">
+              <input type="checkbox" name="dealer-option" id="installation-option" value="1"/>
+              <label for="installation-option"></label>
+            </div>
+              <h3>Installation</h3>
+          </div>
+          <div class="filter-option">
+            <div class="checkbox-option">
+              <input type="checkbox" name="dealer-option" id="residential-option" value="1"/>
+              <label for="residential-option"></label>
+            </div>
+              <h3>Residential</h3>
+          </div>
+          <div class="filter-option">
+            <div class="checkbox-option">
+              <input type="checkbox" name="dealer-option" id="commercial-option" value="1"/>
+              <label for="commercial-option"></label>
+            </div>
+              <h3>Commercial</h3>
+          </div>
+      </div>
+
+    </div>
+
+    <div id="dealer-cards-container">
+
+      <div class="dealer-card">
+        <h3>Aqua Experts</h3>
+        <hr>
+        <div class="dealer-phone">
+          <img class="dealer-phone-icon" alt="phone">
+          <p class="tap-to-call">Tap to call</p>
+          <p class="phone-number">1.888.888.888</p>
+        </div>
+        <p class="click-instructions-card">Can't talk now? Click below to send an email.</p>
+        <button type="button" class="contact-button" id="contact-pro">
+          <img src="images/email-icon.png" alt="email"> Contact this Pro
+        </button>
+        <p class="business-hours-header">Business Hours</p>
+        <p class="business-hours-card">Weekdays 7:00am - 7:00pm</p>
+        <p class="business-hours-card">Saturdays 7:00am - 3:00pm</p>
+        <p class="business-hours-card">Sundays 7:00am - 3:00pm</p>
+        <div class="installation-certs">
+          <div id="first-row-certs">
+            <img src="images/star-installation-pro.png" alt="star">
+            <img src="images/users-commercial-pro.png" alt="commercial">
+          </div>
+          <div id="second-row-certs">
+            <img src="images/home-residential-pro.png" alt="home">
+            <img src="images/gear-service-pro.png" alt="gear">
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div id="modal-container">
+      <div id="contact-modal">
+        <div id="modal-header">
+          <div id="modal-top-strip">
+            <h4>EMAIL</h4>
+            <div id="modal-exit">
+              <p>&#9932;</p>
+            </div>
+          </div>
+          <p>Premium Pool &amp; Spas of Charlotte</p>
+        </div>
+
+        <div id="modal-form">
+          <form>
+            <p>Fill out the form below and Premium Pools &amp;
+              Spas of Charlotte will get in touch.</p>
+            First and last name<br>
+            <input type="text" name="firstlastname"><br>
+            Phone number<br>
+            <input type="number" name="phonenumber"><br>
+            ZIP code<br>
+            <input type="number" name="zipcode"><br>
+            Email address<br>
+            <input type="text" name="email"></br>
+            <div id="optional">
+              Comments or questions <p>optional</p><br>
+            </div>
+            <input type="text" name="comments" id="comments-field"></br>
+            Do you currently own a pool or spa?<br>
+            <div class="checkbox-contact-container">
+              <div class="checkbox-contact-form">
+                <input type="checkbox" name="contact-form-answer" id="form-yes" value=""/>
+                <label for="form-yes"></label>
+              </div>
+              <span class="normal-font-weight">Yes</span>
+              <div class="checkbox-contact-form" id="contact-form-no">
+                <input type="checkbox" name="contact-form-answer" id="form-no" value=""/>
+                <label for="form-no"></label>
+              </div>
+              <span class="normal-font-weight">No</span><br>
+            </div>
+            <hr>
+            <div id="contact-send">
+              <input type="submit" value="Send">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="footer-top">
+      <div id="footer-logo">
+        <img src="images/pool-pros-logo-footer.png" alt="pool-pros-logo">
+      </div>
+
+      <div id="social-icons">
+        <h3>CONNECT WITH US</h3>
+        <img src="images/twitter-icon.png" alt="twitter">
+        <img src="images/facebook-icon.png" alt="facebook">
+        <img src="images/youtube-icon.png" alt="youtube">
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+        <div id="footer-copyright-top">
+          <p>Dealers and Distributors | Commercial Service &nbsp;&nbsp;</p>
+           <img src="images/action-commercial-icon.png" alt="action-icon">
+        </div>
+        <hr>
+        <div id="footer-copyright-bottom">
+          <p>&copy; 2017 Pool Pros | Privacy Policy | Terms and Conditions</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="scripts/pool-pros-script.js" type="text/javascript"></script>
+  </body>
+</html>

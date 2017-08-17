@@ -1,0 +1,1016 @@
+/*
+  colors:
+    Dark blue: #083c8c
+    light blue: #206ddf
+    light grey: #e4e4e4
+    light grey background: #f6f6f6
+    grey for paragraphs: #666666;
+    aqua: #46d6d6
+*/
+
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
+
+
+body {
+  margin: 0;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Open Sans', sans-serif;
+}
+
+header {
+  height: 70vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/*================================================================
+NAVIGATION
+=================================================================*/
+
+#flex-nav {
+  display: flex;
+  width: 100%;
+  height: 4rem;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#header-logo {
+  background: url('../images/pool-pros-logo.png') center no-repeat;
+  background-size: contain;
+  width: 10rem;
+  height: 100%;
+  margin-top: .4rem;
+}
+
+#find-pro-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-border-radius: 3;
+  -moz-border-radius: 3;
+  border-radius: 3px;
+  color: #083c8c;
+  font-size: .8rem;
+  font-weight: bold;
+  background: #ffffff;
+  padding: .4rem .2rem .4rem .2rem;
+  margin-top: .4rem;
+  border: solid #083c8c 1px;
+  text-decoration: none;
+}
+
+#find-pro-button > img{
+  height: 15%;
+  width: 15%;
+  padding-right: .3rem;
+}
+
+#m-menu-icon {
+  background: url('../images/menu-icon-mobile.png') center no-repeat;
+  background-size: contain;
+  width: 3.8rem;
+  height: 3.8rem;
+  position: relative;
+  margin-top: 1.5rem;
+}
+
+#m-dropdown-menu {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  background-color: #fff;
+  width: 100%;
+  border-top: 4px solid #46d6d6;
+  border-bottom: 4px solid #46d6d6;
+  visibility: hidden;
+}
+
+#m-dropdown-header {
+  display: flex;
+  justify-content: center;
+  padding: .5rem 0 .5rem 0;
+}
+
+#m-menu-p {
+  flex-grow: 1;
+  text-align: center;
+  font-weight: bold;
+  color: #083c8c;
+  font-size: 1rem;
+}
+
+#m-dropdown-menu > ul {
+  list-style: none;
+  margin: 0;
+  background-color: #f6f6f6;
+  padding: 0;
+}
+
+#m-dropdown-menu > ul > li {
+  padding: 1.5rem 0 1.5rem 2rem;
+  color: #666666;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#m-dropdown-menu > ul > li > img {
+  padding-right: 1rem;
+  width: 1.5rem;
+  height: 1rem;
+}
+
+.m-menu-nested {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.m-menu-nested > ul > li {
+  padding: 1rem 0 1.5rem 0;
+  list-style: none;
+}
+
+.m-menu-nested > ul > li > a {
+  color: #666666;
+  text-decoration: none;
+}
+
+
+.bottom-white {
+  border-bottom: 2px solid #fff;
+}
+
+/* Mobile X */
+
+#line1 {
+  background-color: #46d6d6;
+  width: .2rem;
+  height: 1rem;
+  transform: rotate(45deg) translate(-1rem, 2rem);
+}
+
+#line2 {
+  background-color: #46d6d6;
+  width: .2rem;
+  height: 1rem;
+  transform: rotate(-45deg) translate(-1.3rem, -1.7rem);
+}
+
+/*===============================================================
+BANNER
+=================================================================*/
+
+#banner {
+  background: url('../images/Hero-image-mobile.png') center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#banner > hr {
+  width: 9rem;
+  height: .02rem;
+  background-color: #fff;
+}
+
+#banner-text-large {
+  font-size: 1.8rem;
+  font-weight: 300;
+  text-shadow: 0 0 4px black;
+}
+
+#banner-text-aqua {
+  color: #46d6d6;
+  font-weight: bold;
+  font-size: .9rem;
+  padding-bottom: 1rem;
+  text-shadow: 0 0 2px black;
+}
+
+#banner-text-lower {
+  padding-top: 1rem;
+  text-shadow: 0 0 1px black;
+}
+
+/*============================================================
+SUB HEADER
+============================================================*/
+
+#options-steps {
+  display: flex;
+  flex-direction: column;
+}
+
+#options-steps img {
+  height: 4rem;
+  width: 4rem;
+}
+
+.pro-options {
+  display: flex;
+  margin: 2rem 2rem 0 2rem;
+  padding-bottom: 1rem;
+}
+
+.pro-steps-content > h3 {
+  color: #083c8c;
+  margin: 0 0 .5rem 1rem;
+}
+
+.pro-steps-content > p {
+  margin: 0 0 0 1rem;
+  color: #666666;
+  font-size: .8rem;
+}
+
+#water-banner {
+  background: url('../images/water-image.png') center no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 9rem;
+}
+
+.bottom-line {
+  border-bottom: 1px solid #e4e4e4;
+}
+
+/*==============================================================
+DEALER FILTER
+===============================================================*/
+
+#dealer-inner {
+  background-color: #f6f6f6;
+  padding: 1rem 1rem 1rem 1rem;
+  height: 4.4rem;
+}
+
+#dealer-filter {
+  display: flex;
+  justify-content: flex-end;
+  align-items: baseline;
+}
+
+#filter-results-btn {
+  background-color: #ffffff;
+}
+
+#down-arrow-btn {
+  background-color: #f6f6f6;
+  border-left: none;
+  padding-top: 1.2rem;
+}
+
+.dropdown-button {
+  padding: 1rem 1.3rem 1rem 1.3rem;
+  margin-top: .4rem;
+  box-shadow: 0;
+  border: 1px solid #e5e5e5;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: black;
+}
+
+.filter-option {
+  display: flex;
+  justify-content: flex-start;
+  margin: 0 0 0 1rem;
+}
+
+.filter-option h3{
+  font-weight: normal;
+}
+
+input[type=checkbox] {
+    visibility: hidden;
+}
+
+.checkbox-option {
+  width: 1.8rem;
+  height: 1.8rem;
+  background-color: #fff;
+	margin: 1rem 2rem 1rem 0;
+	position: relative;
+  border: 1px solid #e5e5e5;
+  border-radius: 6px;
+}
+
+.checkbox-option label {
+  cursor: pointer;
+	position: absolute;
+	width: .4rem;
+	height: .4rem;
+	top: 0;
+	left: 0;
+  z-index:2;
+  background-color: #ddd;
+	border:.7rem solid #ddd;
+  border-radius: 5px;
+}
+
+
+.checkbox-option input[type=checkbox]:checked + label,
+.checkbox-contact-form input[type=checkbox]:checked + label {
+	background-color: #fff;
+  border-color: #206ddf;
+}
+
+#dealer-filter h3 {
+  flex-grow: 1;
+}
+
+#dealer-dropdown {
+  background-color: #ffffff;
+  border: 1px solid #e5e5e5;
+  display: none;
+  z-index: 1;
+  margin-top: -.2rem;
+  padding-right: 1.8rem;
+}
+
+/*===============================================================
+DEALER CARDS DYNAMIC CONTENT
+===============================================================*/
+
+#dealer-cards-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.dealer-card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 400px;
+  border: 1px solid #f6f6f6;
+  border-radius: 8px;
+  box-shadow: 0 3px 5px #666666;
+}
+
+.dealer-card > h3 {
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+
+.dealer-card > hr {
+  width: 90%;
+  border-color: #e4e4e4;
+  border-width: 1px;
+  border-style: solid;
+  display: none;
+}
+
+.dealer-phone {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #206ddf;
+  height: 2rem;
+  width: 70%;
+  color: #ffffff;
+}
+
+.dealer-phone > img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.dealer-phone > p {
+  text-align: center;
+  margin: 0;
+  font-size: .8rem;
+}
+
+.phone-number {
+  font-weight: bold;
+  font-size: 1.1rem!important;
+}
+
+.click-instructions-card {
+  font-size: .8rem;
+  font-weight: 300;
+}
+
+.dealer-card > button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  border-color: #46d6d6;
+  border-radius: 5px;
+  color: #083c8c;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: .7rem 1rem .7rem 1rem;
+  border-style: solid;
+}
+
+.dealer-card > button > img {
+  width: 1.5rem;
+  height: 1.5rem;
+  padding-right: .5rem;
+}
+
+.business-hours-header {
+  font-weight: bold;
+  margin-bottom: 0;
+  margin-top: 2rem;
+}
+
+.business-hours-card {
+  margin: 0;
+}
+
+.installation-certs {
+  background-color: #f6f6f6;
+  height: 6rem;
+  width: 90%;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 2rem;
+}
+
+#first-row-certs {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+#second-row-certs {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+/*===============================================================
+FORMS
+===============================================================*/
+
+#modal-container {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#contact-modal {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  margin-top: 2%;
+  z-index: 1;
+  background-color: #fff;
+  width: 90%;
+  border: 1px solid #666666;
+  max-width: 600px;
+  max-height: 98%;
+}
+
+#modal-header {
+  display: flex;
+  flex-direction: column;
+  height: 8rem;
+  width: 100%;
+  background-color: #083c8c;
+  color: white;
+}
+
+#modal-top-strip > h4 {
+  font-size: .8rem;
+  padding: 1rem 0 0rem 1rem;
+}
+
+#modal-exit {
+  padding: .5rem .5rem 0 0;
+}
+
+#modal-header > p {
+  font-weight: 300;
+  font-size: 1.5rem;
+  padding: .5rem 1rem 0rem 1rem;
+}
+
+#modal-header * {
+  margin: 0;
+}
+
+#modal-top-strip {
+  display: flex;
+  justify-content: space-between;
+  align-items:
+}
+
+#modal-form {
+  height: 30rem;
+  padding: 1rem 1rem 1rem 1rem;
+  font-size: .7rem;
+  color: #666666;
+  font-weight: bold;
+}
+
+#modal-form input {
+  height: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+#modal-form input[type=text] {
+  width: 100%;
+}
+
+#comments-field {
+  height: 3rem!important;
+}
+
+#modal-form > form > p {
+  margin-top: 0;
+  font-size: .8rem;
+  font-weight: 300;
+}
+
+#optional {
+  display: flex;
+  justify-content: space-between;
+}
+
+#optional > p {
+    margin: 0;
+    flex-grow: 1;
+    text-align: right;
+    color: #e4e4e4;
+}
+
+.checkbox-contact-container {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-contact-form {
+  width: .5rem;
+  height: .9rem;
+  background-color: #fff;
+	margin: 1rem 1rem 1rem 0;
+	position: relative;
+}
+
+.checkbox-contact-form label {
+  cursor: pointer;
+	position: absolute;
+	width: .25rem;
+	height: .25rem;
+	top: 0;
+	left: 0;
+  z-index:2;
+  background-color: #ddd;
+	border:.4rem solid #ddd;
+  border-radius: 2px;
+}
+
+#contact-form-no {
+  margin-left: 1rem;
+}
+
+#contact-send {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 2.3rem;
+}
+
+#contact-send > input {
+  border: none;
+  background-color: #fff;
+  color: #46d6d6;
+  font-weight: bold;
+  margin: 0;
+}
+
+.normal-font-weight {
+  font-weight: 400;
+}
+
+
+/*===============================================================
+FOOTER
+===============================================================*/
+
+footer {
+  width 100%;
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+.footer-top {
+  background-color: #083c8c;
+  height: 10rem;
+}
+
+#footer-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60%;
+}
+
+#footer-logo > img{
+  width: 12rem;
+  padding: 1rem 0 1rem 0;
+}
+
+#social-icons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 350px;
+  margin: 0 auto;
+}
+
+#social-icons > img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+#social-icons > h3 {
+  font-size: .9rem;
+  margin: 0;
+  padding-top: .4rem;
+}
+
+.footer-bottom {
+  background-color: #206ddf;
+  height: 6rem;
+  text-align: center;
+  font-size: .8rem;
+  font-weight: 300;
+}
+
+.footer-bottom > hr {
+  margin: 0 auto 0 auto;
+  width: 85%;
+}
+
+#footer-copyright-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#footer-copyright-top > p {
+  margin: 0;
+  padding: 1rem 0 1rem 0;
+}
+
+#footer-copyright-top img {
+  width: 1.2rem;
+  height: 1.15rem;
+  padding: 1rem 0 1rem 0;
+}
+
+/*===========================================================
+SPANS
+===========================================================*/
+
+.light-blue {
+  color: #206ddf;
+}
+
+/*============================================================
+MEDIA QUERIES
+=============================================================*/
+
+@media screen and (max-width: 337px) {
+
+  /* Navigation */
+  #header-logo {
+    width: 8rem;
+  }
+
+  #find-pro-button > button{
+    font-size: .7rem;
+    padding: .3rem .1rem .3rem .1rem;
+  }
+
+  #find-pro-button > button > img{
+    height: 15%;
+    width: 15%;
+    padding-right: .3rem;
+  }
+
+  /* Sub Header */
+  #options-steps img {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+
+  .pro-steps-content > h3 {
+    font-size: 1rem;
+  }
+
+  .pro-steps-content > p {
+    font-size: .7rem;
+  }
+
+  /* Dealer drop down */
+  .dropdown-button {
+    font-size: .8rem;
+  }
+
+  #down-arrow-btn {
+    padding-top: 1.15rem;
+  }
+
+  #dealer-dropdown {
+    font-size: .9rem;
+    padding-right: 1.5rem;
+  }
+
+  /* Footer */
+  .footer-bottom {
+    font-size: .7rem;
+  }
+}
+
+@media screen and (min-width: 426px) {
+  #strip {
+    background-color: #083c8c;
+    width: 100%;
+    height: 7vh;
+  }
+
+  /* Navigation */
+  #flex-nav {
+    height: 7rem;
+    justify-content: space-between;
+  }
+
+  #header-logo {
+    margin-top: 0;
+    width: 14rem;
+    margin-left: 5rem;
+  }
+
+  #find-pro-button{
+    margin-right: 5rem;
+    font-size: .9rem;
+    font-weight: bold;
+    background: #ffffff;
+    padding: .6rem .6rem .6rem .6rem;
+  }
+
+  #m-dropdown-menu {
+    flex-direction: row;
+    background-color: #fff;
+    width: 100%;
+    border-top: 4px solid #46d6d6;
+    border-bottom: 4px solid #46d6d6;
+    /*visibility: visible;*/
+  }
+
+  #m-dropdown-header {
+    display: none;
+  }
+
+  /* Banner */
+  #banner {
+    background: url('../images/hero-image.png') center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  #banner-text-large {
+    font-size: 3rem;
+    font-weight: 300;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
+  }
+
+  #banner-text-aqua {
+    font-size: 1.5rem;
+  }
+
+  #banner-text-lower {
+    padding-top: 1rem;
+    text-shadow: 0 0 1px black;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    margin-bottom: 0;
+  }
+
+  /* Footer */
+  #footer-copyright-top {
+    display: none;
+  }
+
+  .footer-bottom {
+    height: 3rem;
+  }
+
+  .footer-bottom hr {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  /* Menu */
+  .navbar-ul {
+    display: flex;
+    position: relative;
+  }
+
+  .bottom-white {
+    border: none;
+  }
+
+  #m-dropdown-menu {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    justify-content: flex-end;
+    width: 50%;
+    height: 99%;
+    border: none;
+    visibility: visible;
+    background-color: #ffffff;
+  }
+
+  #m-dropdown-header {
+    display: none;
+  }
+
+  #m-dropdown-menu > ul {
+    display: flex;
+  }
+
+  #m-dropdown-menu > ul > li {
+    background-color: #ffffff;
+    position: relative;
+  }
+
+  #m-dropdown-menu > ul > li > img {
+    padding-right: 0;
+    padding-left: .5rem;
+    width: 1rem;
+    height: .6rem;
+  }
+
+  .m-menu-nested  > ul {
+    width: 20rem;
+    padding: 0;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    position: absolute;
+    background-color: #ffffff;
+    top: 5.6rem;
+    left: -14rem;
+    border-bottom: 5px solid #46d6d6;
+  }
+
+  .m-menu-nested > ul > li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-color: #f6f6f6;
+  }
+
+  .menu-active {
+    /*background-color: red;*/
+    border-top: 5px solid #46d6d6;
+  }
+
+  #find-pro-button {
+    order: 1;
+  }
+
+  #m-menu-icon {
+    display: none;
+  }
+
+  /* Steps 1-2-3 */
+  #options-steps {
+    flex-flow: row;
+    max-width: 900px;
+  }
+
+  #sub-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .pro-options {
+    margin: 2rem 0 0 .5rem;
+  }
+
+  .bottom-line {
+    border-bottom: none;
+  }
+
+  /* Dealer Filter */
+  #dynamic-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #dealer-inner {
+    width: 100%;
+    max-width: 1000px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #dealer-filter > button {
+    display: none;
+  }
+
+  #dealer-filter > label {
+    border: none;
+    border-left: 1px solid #666666;
+    background-color: #f6f6f6;
+  }
+
+  #dealer-filter > h3 {
+    padding-right: 1rem;
+  }
+
+  #dealer-dropdown {
+    background-color: #f6f6f6;
+    border: none;
+    display: flex;
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+  }
+
+  .checkbox-option {
+    width: .5rem;
+    height: .5rem;
+  }
+
+  /* Dynamic Dealer Cards */
+  #dealer-cards-container {
+    max-width: 1000px;
+    width: 100%;
+  }
+
+  .dealer-card {
+    margin: 2rem 2rem 2rem 2rem;
+  }
+
+  .dealer-phone {
+    background-color: #ffffff;
+    color: black;
+  }
+
+  .phone-number {
+    font-size: 1.5rem!important;
+  }
+
+  .tap-to-call {
+    display: none;
+  }
+
+  .dealer-card > hr {
+    display: block;
+  }
+}
