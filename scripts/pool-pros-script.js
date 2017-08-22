@@ -180,14 +180,14 @@ function toggleFindButton() {
   }
 }
 
-// Checks window size before changing the phone icon
-function togglePhoneIcon() {
-  if(window.screen.width > 800) {
-    document.getElementById('dealer-phone-icon').src = src='images/phone-icon-desktop.png';
-  } else {
-    document.getElementById('dealer-phone-icon').src = src='images/phone-icon-header.png';
-  }
-}
+// TO-DO fix the toggle for the phone icons 
+// function togglePhoneIcon() {
+//   if(window.screen.width > 800) {
+//     document.getElementById('dealer-phone-icon').src = src='images/phone-icon-desktop.png';
+//   } else {
+//     document.getElementById('dealer-phone-icon').src = src='images/phone-icon-header.png';
+//   }
+// }
 
 function toggleActive(menuId) {
   var targetMenu = document.getElementById(menuId);
