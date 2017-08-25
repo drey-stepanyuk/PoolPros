@@ -17,8 +17,6 @@ function fetchJSON(path, callback) {
 
 // Grabbing data from the json file that is hosted on GitHub
 fetchJSON('https://gist.githubusercontent.com/drey-stepanyuk/5920ed33192183822bc1be4c1344ef43/raw/6d0047008445b85e80577b6d70353a3d714f43dc/dealers.json', function(data){
-  // Testing to see if data gets passed
-    console.log(data);
     var dealers = data.dealers;
     var container = '';
     dealers.forEach(dealer => {
@@ -32,7 +30,7 @@ fetchJSON('https://gist.githubusercontent.com/drey-stepanyuk/5920ed33192183822bc
           <p class="phone-number">${dealer.data.phone1}</p>
         </div>
         <p class="click-instructions-card">Can't talk now? Click below to send an email.</p>
-        <button type="button" class="contact-button" id="contact-pro">
+        <button type="button" class="contact-button" onClick="toggleModal()">
           <img src="images/email-icon.png" alt="email"> Contact this Pro
         </button>
         <p class="business-hours-header">Business Hours</p>
@@ -41,14 +39,15 @@ fetchJSON('https://gist.githubusercontent.com/drey-stepanyuk/5920ed33192183822bc
         <p class="business-hours-card">Sundays ${dealer.data.weekHours.sun}</p>
         <div class="installation-certs">
           <div id="first-row-certs">
-            <img src="images/star-installation-pro.png" alt="star">
-            <img src="images/users-commercial-pro.png" alt="commercial">
+            <img src="images/star-installation-pro.png" alt="star" class="star">
+            <img src="images/users-commercial-pro.png" alt="commercial" class="commercial">
           </div>
           <div id="second-row-certs">
             <img src="images/home-residential-pro.png" alt="home">
             <img src="images/gear-service-pro.png" alt="gear">
           </div>
         </div>
+      </div>
       </div>
       `
       container += card;
@@ -75,6 +74,10 @@ document.getElementById('modal-exit').onclick = function() {
   toggleModal();
 }
 
+document.getElementById('dealer-inner').onclick = function() {
+  filterDealers();
+}
+
 window.onload = function() {
   toggleBannerText();
   toggleFindButton();
@@ -89,11 +92,11 @@ window.onresize = function() {
   toggleButtonDisabled();
 }
 
-// Displays the mobile menu dropdown options
-var arrowArray = document.getElementsByClassName('menu-arrow');
-for(var i = 0; i < arrowArray.length; i++) {
-  var arrow = arrowArray[i];
-  arrow.onclick = function() {
+// Displays the mobile menu dropdown options without ES6
+var menuArray = document.getElementsByClassName('menu-option');
+for(var i = 0; i < menuArray.length; i++) {
+  var option = menuArray[i];
+  option.onclick = function() {
     if(this.classList.contains('pools-spas')) {
       toggleMenuByIdName('pool-menu');
       toggleActive('pool-menu-li');
@@ -151,6 +154,17 @@ function toggleMenuByIdName(menuId){
   }
 }
 
+function toggleActive(menuId) {
+  var targetMenu = document.getElementById(menuId);
+  if(window.screen.width > 800) {
+    if(targetMenu.classList.contains('menu-active')) {
+      targetMenu.classList.remove('menu-active');
+    } else {
+      targetMenu.classList.add('menu-active');
+    }
+  }
+}
+
 // Toggles contact form modal
 function toggleModal() {
   var modal = document.getElementById('modal-container');
@@ -180,23 +194,16 @@ function toggleFindButton() {
   }
 }
 
-// TO-DO fix the toggle for the phone icons 
-// function togglePhoneIcon() {
-//   if(window.screen.width > 800) {
-//     document.getElementById('dealer-phone-icon').src = src='images/phone-icon-desktop.png';
-//   } else {
-//     document.getElementById('dealer-phone-icon').src = src='images/phone-icon-header.png';
-//   }
-// }
-
-function toggleActive(menuId) {
-  var targetMenu = document.getElementById(menuId);
+function togglePhoneIcon() {
+  var phoneIcons = document.querySelectorAll('.dealer-phone-icon');
   if(window.screen.width > 800) {
-    if(targetMenu.classList.contains('menu-active')) {
-      targetMenu.classList.remove('menu-active');
-    } else {
-      targetMenu.classList.add('menu-active');
-    }
+    phoneIcons.forEach(function(phoneIcon) {
+      phoneIcon.src='images/phone-icon-desktop.png';
+    });
+  } else {
+    phoneIcons.forEach(function(phoneIcon) {
+      phoneIcon.src='images/phone-icon-header.png';
+    });
   }
 }
 
