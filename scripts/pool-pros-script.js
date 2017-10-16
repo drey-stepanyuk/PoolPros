@@ -47,7 +47,7 @@ fetchJSON('https://gist.githubusercontent.com/drey-stepanyuk/5920ed33192183822bc
       container += card;
     });
 
-    document.getElementById('dealer-cards-container').innerHTML = container;
+    //document.getElementById('dealer-cards-container').innerHTML = container;
 });
 
 // Displays the mobile menu dropdown options without ES6
