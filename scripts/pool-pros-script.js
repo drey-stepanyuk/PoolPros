@@ -38,14 +38,8 @@ fetchJSON('https://gist.githubusercontent.com/drey-stepanyuk/5920ed33192183822bc
         <p class="business-hours-card">Saturdays ${dealer.data.weekHours.sat}</p>
         <p class="business-hours-card">Sundays ${dealer.data.weekHours.sun}</p>
         <div class="installation-certs">
-          <div id="first-row-certs">
-            <img src="images/star-installation-pro.png" alt="star" class="star">
-            <img src="images/users-commercial-pro.png" alt="commercial" class="commercial">
-          </div>
-          <div id="second-row-certs">
-            <img src="images/home-residential-pro.png" alt="home">
-            <img src="images/gear-service-pro.png" alt="gear">
-          </div>
+          ${toggleCertsFirstRow(dealer.data.certifications)}
+          ${toggleCertsSecondRow(dealer.data.certifications)}
         </div>
       </div>
       </div>
@@ -55,42 +49,6 @@ fetchJSON('https://gist.githubusercontent.com/drey-stepanyuk/5920ed33192183822bc
 
     document.getElementById('dealer-cards-container').innerHTML = container;
 });
-
-
-document.getElementById('down-arrow-btn').onclick = function() {
-  toggleDealerOptions();
-  toggleDivHeight();
-};
-
-document.getElementById('m-menu-icon').onclick = function() {
-  toggleMobileMenu();
-}
-
-document.getElementById('m-exit').onclick = function() {
-  toggleMobileMenu();
-}
-
-document.getElementById('modal-exit').onclick = function() {
-  toggleModal();
-}
-
-document.getElementById('dealer-inner').onclick = function() {
-  filterDealers();
-}
-
-window.onload = function() {
-  toggleBannerText();
-  toggleFindButton();
-  togglePhoneIcon();
-  toggleButtonDisabled();
-}
-
-window.onresize = function() {
-  toggleBannerText();
-  toggleFindButton();
-  togglePhoneIcon();
-  toggleButtonDisabled();
-}
 
 // Displays the mobile menu dropdown options without ES6
 var menuArray = document.getElementsByClassName('menu-option');
@@ -113,6 +71,52 @@ for(var i = 0; i < menuArray.length; i++) {
   }
 }
 
+// Displays certs
+function toggleCertsFirstRow(certs) {
+  let finalCerts = 
+  `
+  <div id="first-row-certs">
+  `;
+
+  Array.from(certs).forEach((cert) => {
+    if(cert == 'Installation Pro') {
+      finalCerts +=
+      `
+        <img src="images/star-installation-pro.png" alt="star" class="star">
+      `;
+    } else if(cert == 'Commercial Pro') {
+      finalCerts +=
+      `
+        <img src="images/users-commercial-pro.png" alt="commercial" class="commercial">
+      `;
+    }
+  });
+
+  return finalCerts += `</div>`;
+}
+
+function toggleCertsSecondRow(certs) {
+  let finalCerts = 
+  `
+  <div id="second-row-certs">
+  `;
+
+  Array.from(certs).forEach((cert) => {
+    if(cert == 'Residential Pro') {
+      finalCerts +=
+      `
+        <img src="images/home-residential-pro.png" alt="home">
+      `;
+    } else if(cert == 'Service Pro') {
+      finalCerts +=
+      `
+        <img src="images/gear-service-pro.png" alt="gear">
+      `;
+    }
+  });
+
+  return finalCerts += `</div>`;
+}
 
 // Filter result drop down menu
 function toggleDealerOptions() {
@@ -215,4 +219,35 @@ function toggleButtonDisabled() {
   } else {
     button.disabled = false;
   }
+}
+
+document.getElementById('down-arrow-btn').onclick = function() {
+  toggleDealerOptions();
+  toggleDivHeight();
+};
+
+document.getElementById('m-menu-icon').onclick = function() {
+  toggleMobileMenu();
+}
+
+document.getElementById('m-exit').onclick = function() {
+  toggleMobileMenu();
+}
+
+document.getElementById('modal-exit').onclick = function() {
+  toggleModal();
+}
+
+window.onload = function() {
+  toggleBannerText();
+  toggleFindButton();
+  togglePhoneIcon();
+  toggleButtonDisabled();
+}
+
+window.onresize = function() {
+  toggleBannerText();
+  toggleFindButton();
+  togglePhoneIcon();
+  toggleButtonDisabled();
 }
