@@ -459,13 +459,13 @@ DEALER CARDS DYNAMIC CONTENT
 #first-row-certs {
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 #second-row-certs {
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 /*===============================================================
@@ -703,6 +703,10 @@ SPANS
 
 .light-blue {
   color: #206ddf;
+}
+
+.cert-description {
+  font-size: .8rem;
 }
 
 /*============================================================

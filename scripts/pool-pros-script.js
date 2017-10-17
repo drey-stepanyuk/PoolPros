@@ -38,8 +38,8 @@ fetchJSON('https://gist.githubusercontent.com/drey-stepanyuk/5920ed33192183822bc
         <p class="business-hours-card">Saturdays ${dealer.data.weekHours.sat}</p>
         <p class="business-hours-card">Sundays ${dealer.data.weekHours.sun}</p>
         <div class="installation-certs">
-          ${toggleCertsFirstRow(dealer.data.certifications)}
-          ${toggleCertsSecondRow(dealer.data.certifications)}
+          ${renderCertsFirstRow(dealer.data.certifications)}
+          ${renderCertsSecondRow(dealer.data.certifications)}
         </div>
       </div>
       </div>
@@ -72,7 +72,7 @@ for(var i = 0; i < menuArray.length; i++) {
 }
 
 // Displays certs
-function toggleCertsFirstRow(certs) {
+function renderCertsFirstRow(certs) {
   let finalCerts = 
   `
   <div id="first-row-certs">
@@ -83,11 +83,13 @@ function toggleCertsFirstRow(certs) {
       finalCerts +=
       `
         <img src="images/star-installation-pro.png" alt="star" class="star">
+        <span class="cert-description">Installation Pro</span>
       `;
     } else if(cert == 'Commercial Pro') {
       finalCerts +=
       `
         <img src="images/users-commercial-pro.png" alt="commercial" class="commercial">
+        <span class="cert-description">Commercial Pro</span>
       `;
     }
   });
@@ -95,7 +97,7 @@ function toggleCertsFirstRow(certs) {
   return finalCerts += `</div>`;
 }
 
-function toggleCertsSecondRow(certs) {
+function renderCertsSecondRow(certs) {
   let finalCerts = 
   `
   <div id="second-row-certs">
@@ -106,11 +108,13 @@ function toggleCertsSecondRow(certs) {
       finalCerts +=
       `
         <img src="images/home-residential-pro.png" alt="home">
+        <span class="cert-description">Residential Pro</span>
       `;
     } else if(cert == 'Service Pro') {
       finalCerts +=
       `
         <img src="images/gear-service-pro.png" alt="gear">
+        <span class="cert-description">Service Pro</span>
       `;
     }
   });
