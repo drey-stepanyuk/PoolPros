@@ -15,8 +15,8 @@ var app = (function () {
 
     function renderData(json){
         let dealerContainer = document.getElementById('dealer-cards-container');
-
         let containerHtml = '';
+
         json.dealers.forEach(function(element) {
             containerHtml += `<div class="dealer-card">
               <h3>${element.data.name}</h3>
@@ -32,8 +32,8 @@ var app = (function () {
               </button>
               <p class="business-hours-header">Business Hours</p>
               <p class="business-hours-card">Weekdays ${element.data.weekHours.mon}</p>
-              <p class="business-hours-card">Saturdays ${element.data.weekHours.sat}</p>
-              <p class="business-hours-card">Sundays ${element.data.weekHours.sun}</p>
+              <p class="business-hours-card">Saturdays ${scanEmptyVals(element.data.weekHours.sat)}</p>
+              <p class="business-hours-card">Sundays ${scanEmptyVals(element.data.weekHours.sun)}</p>
               <div class="installation-certs">
                 ${renderCertsFirstRow(element.data.certifications)}
                 ${renderCertsSecondRow(element.data.certifications)}
@@ -46,9 +46,6 @@ var app = (function () {
         dealerContainer.innerHTML = containerHtml;
     }
 
-    // Don't worry if you don't understand this, it's not part of Promises.
-    // We are using the JavaScript Module Pattern to enable unit testing of
-    // our functions.
     return {
         initialize: (initialize),
     };

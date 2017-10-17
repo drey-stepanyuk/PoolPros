@@ -19,3 +19,4 @@ This project has been a great experience and opportunity. I still have a ton of 
 - [ ] Fix When menu issue when opening menu/dealer filter in mobile the menu disappears from the desktop view.
 - [ ] Refactor code
 - [ ] Review for redundancy
+- [ ] Use Modular pattern for code refactor 

@@ -78,6 +78,15 @@ function renderCertsSecondRow(certs) {
   return finalCerts += `</div>`;
 }
 
+// Scans data for empty values and return Closed if so
+function scanEmptyVals(val) {
+  if (val == '') {
+    return 'CLOSED';
+  }
+
+  return val;
+}
+
 // Filter result drop down menu
 function toggleDealerOptions() {
   var dealerDrop = document.getElementById('dealer-dropdown');
