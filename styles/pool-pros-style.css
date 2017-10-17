@@ -465,7 +465,15 @@ DEALER CARDS DYNAMIC CONTENT
 #second-row-certs {
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+}
+
+.cert-block {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  width: 50%;
+  padding-left: 1rem;
 }
 
 /*===============================================================
@@ -528,7 +536,7 @@ FORMS
 #modal-top-strip {
   display: flex;
   justify-content: space-between;
-  align-items:
+  align-content: center;
 }
 
 #modal-form {
@@ -625,7 +633,7 @@ FOOTER
 ===============================================================*/
 
 footer {
-  width 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   color: white;
@@ -707,6 +715,11 @@ SPANS
 
 .cert-description {
   font-size: .8rem;
+  color: #666666;
+  margin-left: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /*============================================================
@@ -762,6 +775,11 @@ MEDIA QUERIES
   /* Footer */
   .footer-bottom {
     font-size: .7rem;
+  }
+
+  /* Spans */
+  .cert-description {
+    font-size: .6rem;
   }
 }
 

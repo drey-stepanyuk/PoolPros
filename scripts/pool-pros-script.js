@@ -1,55 +1,3 @@
-// Rendering the JSON DATA //
-/////////////////////////////
-
-function fetchJSON(path, callback) {
-    var httpRequest = new XMLHttpRequest();
-    httpRequest.onreadystatechange = function() {
-        if (httpRequest.readyState === 4) {
-            if (httpRequest.status === 200) {
-                var data = JSON.parse(httpRequest.responseText);
-                if (callback) callback(data);
-            }
-        }
-    };
-    httpRequest.open('GET', path);
-    httpRequest.send();
-}
-
-// Grabbing data from the json file that is hosted on GitHub
-fetchJSON('https://gist.githubusercontent.com/drey-stepanyuk/5920ed33192183822bc1be4c1344ef43/raw/6d0047008445b85e80577b6d70353a3d714f43dc/dealers.json', function(data){
-    var dealers = data.dealers;
-    var container = '';
-    dealers.forEach(dealer => {
-      var card = `
-      <div class="dealer-card">
-        <h3>${dealer.data.name}</h3>
-        <hr>
-        <div class="dealer-phone">
-          <img class="dealer-phone-icon" alt="phone">
-          <p class="tap-to-call">Tap to call</p>
-          <p class="phone-number">${dealer.data.phone1}</p>
-        </div>
-        <p class="click-instructions-card">Can't talk now? Click below to send an email.</p>
-        <button type="button" class="contact-button" onClick="toggleModal()">
-          <img src="images/email-icon.png" alt="email"> Contact this Pro
-        </button>
-        <p class="business-hours-header">Business Hours</p>
-        <p class="business-hours-card">Weekdays ${dealer.data.weekHours.mon}</p>
-        <p class="business-hours-card">Saturdays ${dealer.data.weekHours.sat}</p>
-        <p class="business-hours-card">Sundays ${dealer.data.weekHours.sun}</p>
-        <div class="installation-certs">
-          ${renderCertsFirstRow(dealer.data.certifications)}
-          ${renderCertsSecondRow(dealer.data.certifications)}
-        </div>
-      </div>
-      </div>
-      `
-      container += card;
-    });
-
-    //document.getElementById('dealer-cards-container').innerHTML = container;
-});
-
 // Displays the mobile menu dropdown options without ES6
 var menuArray = document.getElementsByClassName('menu-option');
 for(var i = 0; i < menuArray.length; i++) {
@@ -82,14 +30,18 @@ function renderCertsFirstRow(certs) {
     if(cert == 'Installation Pro') {
       finalCerts +=
       `
+      <div class="cert-block">
         <img src="images/star-installation-pro.png" alt="star" class="star">
         <span class="cert-description">Installation Pro</span>
+      </div>
       `;
     } else if(cert == 'Commercial Pro') {
       finalCerts +=
       `
+      <div class="cert-block">
         <img src="images/users-commercial-pro.png" alt="commercial" class="commercial">
         <span class="cert-description">Commercial Pro</span>
+      </div>
       `;
     }
   });
@@ -107,14 +59,18 @@ function renderCertsSecondRow(certs) {
     if(cert == 'Residential Pro') {
       finalCerts +=
       `
+      <div class="cert-block">
         <img src="images/home-residential-pro.png" alt="home">
         <span class="cert-description">Residential Pro</span>
+      </div>
       `;
     } else if(cert == 'Service Pro') {
       finalCerts +=
       `
+      <div class="cert-block">
         <img src="images/gear-service-pro.png" alt="gear">
         <span class="cert-description">Service Pro</span>
+      </div>
       `;
     }
   });

@@ -35,8 +35,8 @@ var app = (function () {
               <p class="business-hours-card">Saturdays ${element.data.weekHours.sat}</p>
               <p class="business-hours-card">Sundays ${element.data.weekHours.sun}</p>
               <div class="installation-certs">
-                ${toggleCertsFirstRow(element.data.certifications)}
-                ${toggleCertsSecondRow(element.data.certifications)}
+                ${renderCertsFirstRow(element.data.certifications)}
+                ${renderCertsSecondRow(element.data.certifications)}
               </div>
             </div>
             </div>
